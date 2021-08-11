@@ -6,8 +6,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('projects/', views.projects, name="projects"),
-    path('projects/<str:pk>', views.project, name="project"),
+
+    path('', views.projects, name="projects"),
+    path('project/<str:pk>', views.project, name="project"),
     path('profile/', views.profile, name="profile"),
     
 

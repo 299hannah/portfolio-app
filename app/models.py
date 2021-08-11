@@ -18,6 +18,7 @@ class Service(models.Model):
     name = models.CharField(max_length=255, verbose_name="Service name")
     description=models.TextField(verbose_name="About service")
 
+
     def __str__(self):
         return self.name
 

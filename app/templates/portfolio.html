@@ -3,4 +3,200 @@
 {%load static%}
 
 {% block content %}
-{%endblock%}
+<main class="l-main">
+    <!--===== HOME =====-->
+    <section class=" container home" id="home">
+        <div class="home__container bd-grid">
+            <br>
+            {%for about in about%}
+         
+           
+            <p style="color: rgb(231, 231, 231);" id="home__title">I am <strong>Mwangi Hannah Wambui</strong> and 
+                <br>
+                I am a <b>web designer</b><br>
+            If somebody else can do something 
+                <br>that I'm doing they should do it. And what i'd 
+                <br>like better to try to to is locate things which are 
+                <br>able to represent a singular contribution to the world
+                <br> - the contribution that only I and my portfolio of talents can make happen.</p>
+       
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
+            </div>
+
+            <img src="{{about.image.url}}" alt=""
+            class="home__img">
+        </div>
+        {%endfor%}
+    </section>
+
+
+
+    <!-- #========================================== -->
+
+
+    <!-- about section start -->
+    <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills__container bd-grid">
+            <div class="skills__box">
+                <h3 class="skills__subtitle">Development</h3>
+                
+                {%for service  in service%}
+       
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+                
+                <!--CB-modal -->
+                <!-- Button trigger modal -->
+                <!-- Button trigger modal -->
+              
+                <span class="skills__name"  data-toggle="modal" data-target="#{{service.id}}">
+                    {{service.name}}</span>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="{{service.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Description</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        {{service.description}}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                
+                <!--modal-->
+               
+               
+                
+      
+               
+                {%endfor%}
+
+                <h3 class="skills__subtitle">Design</h3>
+                <span class="skills__name">Figma</span>
+                <!-- <span class="skills__name">Adobe XD</span>
+                <span class="skills__name">Photoshop</span> -->
+                <h3 class="skills__subtitle">Backend</h3>
+                <span class="skills__name">Django</span>
+                <span class="skills__name">Php</span>
+
+            </div>
+
+            <div class="skills__img">
+                <img src='https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8
+                fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80' alt="">
+            </div>
+        </div>
+    </section>
+    <!-- projects section  -->
+
+    <!--===== PORTFOLIO =====-->
+
+    <section class="  con  project section container" id="project">
+        <h2 class="section-title">project</h2>
+        {%for project in projects%}
+
+        <div class=" owl-carousel owl-theme project__container bd-grid">
+          
+            <div class="project__img">
+                <img src="{{project.image.url}}"  style="width: 200px; height: 200px;"alt="">
+    
+                <div class="project__link">
+                    <a href="https://dry-cove-04670.herokuapp.com/" class="project__link-name">View my reviews project</a>
+                </div>
+            </div>
+          
+           
+    
+           
+        </div>
+    </section>
+    {{project.title}}
+    {{project.body}}
+    <img src="{{project.image.url}}"  style="width: 200px; height: 200px;"alt="">
+    
+    {%endfor%}
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+            <div class="contact__info">
+                <h3 class="contact__subtitle">EMAIL</h3>
+                <span class="contact__text">info.mail.com</span>
+
+                <h3 class="contact__subtitle">PHONE</h3>
+                <span class="contact__text">+20 999-999</span>
+
+                <h3 class="contact__subtitle">ADRESS</h3>
+                <span class="contact__text">My contry</span>
+            </div>
+
+            <form action="" class="contact__form">
+                <div class="contact__inputs">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="mail" placeholder="Email" class="contact__input">
+                </div>
+
+                <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                <input type="submit" value="Enviar" class="contact__button">
+            </form>
+        </div>
+    </section>
+</main>
+
+<!--===== FOOTER =====-->
+<footer class="footer section">
+    <div class="footer__container bd-grid">
+        <div class="footer__data">
+            <h2 class="footer__title">MWANGI Hannah Wambui</h2>
+            <p class="footer__text">I'm Mwangi Hannah wambui and this is my personal website</p>
+        </div>
+
+        <div class="footer__data">
+            <h2 class="footer__title">EXPLORE</h2>
+            <ul>
+                <li><a href="#home" class="footer__link">Home</a></li>
+                <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#skills" class="footer__link">Skills</a></li>
+                <li><a href="#project" class="footer__link">project</a></li>
+                <li><a href="#Contact" class="footer__link">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer__data">
+            <h2 class="footer__title">FOLLOW</h2>
+            <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+            <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+        </div>
+
+
+    </div>
+</footer>
+
+<!--===== SCROLL REVEAL =====-->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!--===== MAIN JS =====-->
+<script src="assets/js/main.js"></script>
+
+
+
+
+    {%endblock%}

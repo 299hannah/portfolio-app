@@ -6,18 +6,21 @@ from .forms import ProjectForm
 # Create your views here.
 def index(request):
     projects = Projects.objects.all()
-    context={'projects':projects}
+    about = About.objects.all()
+    service=Service.objects.all()
+
+    context={'projects':projects,
+    'about':about,
+    'service':service}
     return render(request,'portfolio.html',context)
 
-def about(request):
-    about = About.objects.first()
-    ctx={'about',about}
-    return render(request,'about.html',ctx)
 
 def projects(request):
-    projects = Projects.objects.filter(active=True)
+    projects = Projects.objects.filter()
+    # projects = Projects.objects.all()
+
     ctx = {'projects':projects}
-    return render(request,'projects.html',projects)
+    return render(request,'projects.html',ctx)
 
 def project(request, pk):
     project = Projects.object.get(id=pk)
