@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-# Create your models here.
 class About(models.Model):
     description=models.TextField()
     image = CloudinaryField('image')
