@@ -26,6 +26,7 @@ class Service(models.Model):
 class Projects(models.Model):
     title=models.CharField(max_length=255, null=True, verbose_name="Project title")
     image=models.ImageField(upload_to="work", blank=True)
+    url =models.CharField(max_length=255, null=True)
     body = models.TextField(null=True, blank=True)
     def __str__(self):
         return self.title

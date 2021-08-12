@@ -82,13 +82,13 @@ img{
 
 /*===== CLASS CSS ===== */
 .section{
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 .section-title{
     position: relative;
     font-size: var(--h2-font-size);
     color: var(--dark-color);
-    margin: var(--mb-4) 0;
+    /* margin: var(--mb-4) 0; */
     text-align: center;
 }
 .section-title::after{
@@ -298,6 +298,9 @@ padding-bottom: 30px;
 /* ===== Project =====*/
 .project{
     background-color: var(--white-color);
+    box-shadow: 10px 5px 10px 10px rgba(0, 0, 0, 0.16);
+
+
 }
 .project__container{
     justify-items: center;
@@ -306,6 +309,9 @@ padding-bottom: 30px;
 .project__img{
     position: relative;
     overflow: hidden;
+    width: 200px;
+
+
     
 }
 .project__img img{
@@ -313,19 +319,17 @@ padding-bottom: 30px;
     width: 100%;
     height: 100%;
 
-}
-/* .con{
-    transform:scale(1.3);
 
 }
-.con:hover{
+
+/* .con:hover{
     transition: all 1s ease;
 
 } */
 .project__link{
     position: absolute;
     bottom: -100%;
-    width: 60%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -336,19 +340,28 @@ padding-bottom: 30px;
     backdrop-filter: blur(10px);
     text-decoration: none;
     transition: .3s;
+
+}
+.project__link a:hover{
+    color: white;
+
 }
 .project__img:hover .project__link{
     bottom: 0;
 }
 .project__link-name{
-    color: white;
+    color: rgb(31, 12, 37);
+    text-decoration: none;
 }
+.project__link-name:hover{
+    text-decoration: none;
 
+}
 
 
 /* ===== FOOTER=====*/
 .footer{
-    background-color: var(--dark-color);
+    background-color: rgba(0, 0, 0, 0.16);
 }
 .footer__container{
     row-gap: 2rem;
