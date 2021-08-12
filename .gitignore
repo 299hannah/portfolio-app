@@ -3,5 +3,5 @@ env/
 *.pyc
 /db.sqlite/
 .env
-migrations/
+# migrations/
 
