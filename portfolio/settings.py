@@ -13,9 +13,16 @@ import os
 from decouple import config,Csv
 import django_heroku
 import dj_database_url
-
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from pathlib import Path
 
+cloudinary.config( 
+  cloud_name = "notknowntouser", 
+  api_key = "135496514213861", 
+  api_secret = "Chbu1VMgsyQsaM8iwt6g2W1JRJM" 
+)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -42,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'bootstrap4',
+    'cloudinary',
+
 ]
 
 MIDDLEWARE = [

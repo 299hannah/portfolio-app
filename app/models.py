@@ -1,11 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.fields.files import ImageField
+# from django.db.models.fields.files import ImageField
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 class About(models.Model):
     description=models.TextField()
-    image = models.ImageField(upload_to="about")
+    image = CloudinaryField('image')
 
     class Meta:
         verbose_name="About me"
@@ -25,7 +27,7 @@ class Service(models.Model):
 
 class Projects(models.Model):
     title=models.CharField(max_length=255, null=True, verbose_name="Project title")
-    image=models.ImageField(upload_to="work", blank=True)
+    image = CloudinaryField('image')
     url =models.CharField(max_length=255, null=True)
     body = models.TextField(null=True, blank=True)
     def __str__(self):
