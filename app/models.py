@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from django.db.models.fields.files import ImageField
 from cloudinary.models import CloudinaryField
 
 
@@ -35,12 +34,4 @@ class Projects(models.Model):
     def __str__(self):
         return self.title
 
-# class Client(models.Model):
-#     name=models.CharField(max_length = 255)
-#     description = models.TextField(verbose_name="client say")
-#     image = models.ImageField(upload_to="clients",default="default.png")
-
-#     def __str__(self):
-#         return self.name
-     
 
