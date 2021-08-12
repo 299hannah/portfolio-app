@@ -7,7 +7,6 @@ from cloudinary.models import CloudinaryField
 class About(models.Model):
     description=models.TextField()
     image = CloudinaryField('image')
-
     class Meta:
         verbose_name="About me"
         verbose_name_plural = "About me"
