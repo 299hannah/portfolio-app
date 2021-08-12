@@ -8,11 +8,11 @@ $(document).ready(function(){
         autoplay:true,
         autoplayTimeout:3000,
         // autoWidth:false,
-        items:5,
+        items:7,
         margin:0,
         // autoplayHoverPause:true,
         dots: true,
-        // stagePadding:30,
+        // stagePadding:10,
         // nav:true,
        
         // navText:[$('.owl-navigation .owl-nav-prev'),$('.owl-navigation .owl-nav-next')]
