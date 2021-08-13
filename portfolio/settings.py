@@ -161,6 +161,7 @@ DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
+MODE=config("MODE", default="dev")
 
 
 # Default primary key field type
