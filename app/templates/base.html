@@ -15,6 +15,7 @@
     {% bootstrap_css %}
     <link rel="stylesheet" href=" {%static 'css/all.css'%}">
     <!-- owl-carousel -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
@@ -30,8 +31,10 @@
 
 <body>
     <header class="l-header">
+       
         <nav class="nav bd-grid">
             <div>
+               
                 <a href="#" class="nav__logo">Mwangi Hannah</a>
             </div>
 
@@ -57,6 +60,10 @@
         {% endblock %}
     </main>
     {% block scripts %}
+
+
+
+    
     
         <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity = "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -89,6 +96,8 @@
         <script src="{% static 'js/main.js'%}"></script>
         
 <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 
   {%endblock%}

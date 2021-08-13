@@ -10,22 +10,23 @@
   
     <section class=" container con2 home" id="home">
         <div class="home__container bd-grid">
-            <br>
+         
             {%for about in about%}
          
            
-            <p style="color: rgb(231, 231, 231);" id="home__title">I am <strong>Mwangi Hannah Wambui</strong> and 
+            <p style=" margin-top:120px;color: rgb(231, 231, 231);" id="home__title">I am <strong>Mwangi Hannah Wambui</strong> and 
                 <br>
                 I am a <b>web designer</b><br>
             If somebody else can do something 
                 <br>that I'm doing they should do it. And what i'd 
                 <br>like better to try to to is locate things which are 
                 <br>able to represent a singular contribution to the world
-                <br> - the contribution that only I and my portfolio of talents can make happen.</p>
+                <br> - the contribution that only I and my portfolio of talents 
+                can make happen.</p>
        
-            <!-- <div class="home__scroll">
-                <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
-            </div> -->
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
 
             <img src="{{about.image.url}}" alt=""
             class="home__img">
@@ -105,6 +106,7 @@
             </div>
           
         </div>
+      
     </section>
     <!-- projects section  -->
 
@@ -190,7 +192,7 @@
             <p class="footer__text" style="color: black;">I'm Mwangi Hannah wambui and this is my personal website</p>
         </div>
 
-        <div class="footer__data" >
+        <div class="footer__data s1" >
             <h2 class="footer__title" style="color: black;">EXPLORE</h2>
             <ul>
                 <li><a href="#home" class="footer__link">Home</a></li>
@@ -210,7 +212,24 @@
     </div>
 </footer>
 
+
+
+
 <!--===== SCROLL REVEAL =====-->
+
+
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+<div id="theme-options-wrapper">
+    <div data-mode="light" id="light-mode" class="theme-dot"> </div>
+    <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+    <div data-mode="green" id="green-mode" class="theme-dot"></div>
+    <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+</div>
+
+
 <script src="https://unpkg.com/scrollreveal"></script>
 
 
